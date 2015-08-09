@@ -11,7 +11,7 @@ Docker
 
 Get repository from GitHub
 ```
-git clone https://github.com/MasashiTeruya/hello-sinatra.git && cd hello-sinatra
+git clone https://github.com/MasashiTeruya/hello-sinatra.git && cd hello-sinatra/app
 ```
 
 Build Docker image
