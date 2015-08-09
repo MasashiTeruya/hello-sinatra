@@ -13,7 +13,10 @@ Get repository from GitHub
 ```
 git clone https://github.com/MasashiTeruya/hello-sinatra.git && cd hello-sinatra
 ```
-
+Execute bundle install with docker
+```
+docker run --rm -v "$PWD":/usr/src/app -w /usr/src/app ruby bundle install
+```
 Build Docker image
 ```
 docker build -t hello-sinatra .
@@ -23,10 +26,6 @@ Make sure hello-sinatra image exists
 $ docker images hello-sinatra
 REPOSITORY          TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
 hello-sinatra       latest              7131cb10a252        31 minutes ago      712.8 MB
-```
-Execute bundle install with docker
-```
-docker run --rm -v "$PWD":/usr/src/app -w /usr/src/app ruby bundle install
 ```
 Run hello-sinatra image and publish HTTP 8080 port
 ```
